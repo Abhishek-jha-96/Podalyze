@@ -1,0 +1,24 @@
+{
+  "name": "podalyze",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write",
+    "build": "pnpm -r run build",
+    "lint": "pnpm -r run lint",
+    "tsc": "pnpm -r exec tsc --noEmit",
+    "validate": "pnpm format:write && pnpm tsc && pnpm lint && pnpm build",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.3"
+  }
+}
